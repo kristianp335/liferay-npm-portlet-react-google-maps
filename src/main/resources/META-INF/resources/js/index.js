@@ -45,9 +45,12 @@ class SimpleMap extends Component {
  
   render() {
     return (
+			//parent DIV must have a width and height
+			//Notice in the MapRollOver component call I am passing a function via props to the child so it can action a function in the parent component.
+			//The function I pass allows me to modify state in the parent component SimpleMap
       <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyBLOmQnChq13KwFT3zg3OC-nki1ggeCmfw" }}
+          bootstrapURLKeys={{ key: "Insert your Google Maps JavaScript API key here" }}
           defaultCenter={this.state.center}
           defaultZoom={this.state.zoom}
         >
@@ -69,6 +72,7 @@ class SimpleMap extends Component {
 						<span lat={51.622269} lng={0.226304}  aria-hidden="true" className="icon-truck">
 						</span>
 					</span>
+					
 					{this.state.showVan ? <MapRollOver action={this.closeMapRollOver} lat={51.622269} lng={0.226304} messageProp="On route to Canary - Susan Watt" messageType = "info"/> : null}	 
 				</GoogleMapReact >
       </div>
