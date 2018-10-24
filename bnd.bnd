@@ -1,0 +1,5 @@
+Bundle-Name: react-siemens-map
+Bundle-SymbolicName: com.liferay.kris.map.siemens
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.kris.map.siemens.constants
+Web-ContextPath: /react-siemens-map
